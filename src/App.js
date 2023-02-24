@@ -12,8 +12,14 @@ export default function Board() {
     nextSquares[i] = "X";
     setSquares(nextSquares)
   }
+
+  function handleClear() {
+    <Board></Board>
+  }
+
   return (
     <>
+      <button onClear={handleClear}> clear </button>
       <div className="board-row">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
         <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
